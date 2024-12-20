@@ -46,7 +46,7 @@ export const updateUser = async(req, res) => {
 
 export const deleteUser = async(req, res) => {
     try {
-        await User.destroy(req.body, {
+        await User.destroy({
             where: {
                 id: req.params.id
             }
